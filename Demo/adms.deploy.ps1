@@ -1,4 +1,9 @@
-# Executes the az commands
+# If you do not have the Az (Azure) Module installed in PowerShell, you will need to install it
+# Note you only need to do this once
+# Install-Module Az
+
+# Login to Azure. This will open your default web browser and ask you to login to Azure.
+# If you are already logged in, it will just ask you to confirm the account to use
 az login
 
 # Set Account
@@ -7,35 +12,23 @@ az login
 az account set --subscription "Azure Free Trial"
 
 # Create the resource group
-az group create --location centralus --name admsdemorg
-
-# Original from the supplied demo (for reference)
-# az group deployment create --name admsdemodeploy --resource-group admsdemo3 --template-uri https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/101-azure-database-migration-service/azuredeploy.json --parameters https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/101-azure-database-migration-service/azuredeploy.parameters.json
-
-# This is for local development
-# az group deployment create --name admsdemodeploy --resource-group admsdemorg --template-file "C:\Users\arcan\OneDrive\Pluralsight\Azure Migrate your SQL Data to Azure SQL\Microsoft-Written-PoC\migrate-sql-server-relational-data\demos\adms.deploy.json" --parameters "C:\Users\arcan\OneDrive\Pluralsight\Azure Migrate your SQL Data to Azure SQL\Microsoft-Written-PoC\migrate-sql-server-relational-data\demos\adms.parameters.json"
+az group create --location centralus --name acadmsrg
 
 # This is to deploy from the Microsoft github site for this ADMS tutorial
-az group deployment create --name admsdemodeploy --resource-group admsdemorg --template-uri https://raw.githubusercontent.com/arcanecode/Introduction-to-the-Azure-Data-Migration-Service/master/Demo/adms.deploy.json --parameters https://raw.githubusercontent.com/arcanecode/Introduction-to-the-Azure-Data-Migration-Service/master/Demo/adms.parameters.json
+# The amount of time it takes is dependant on your account and how busy
+# Azure is, but times of 20 minutes are not uncommon
+az group deployment create --name acadmsdeploy --resource-group acadmsrg --template-uri https://raw.githubusercontent.com/arcanecode/Introduction-to-the-Azure-Data-Migration-Service/master/Demo/adms.deploy.json --parameters https://raw.githubusercontent.com/arcanecode/Introduction-to-the-Azure-Data-Migration-Service/master/Demo/adms.parameters.json
 
 
 #------------------------------------------------------------------------------
 # This section is just some useful helper commands for use in dev
 #------------------------------------------------------------------------------
 # To reset when done, delete the group
-# az group delete --name admsdemorg
+# az group delete --name acadmsrg
 
-# List locations
+# For this demo, we are using the centralus location. You may wish to change
+# to a location closer to you. In order to get a list of locations, use the
+# following command:
 # az account list-locations --output table
 
-#------------------------------------------------------------------------------
-# This section has tips for troubleshooting the customs script extension
-#------------------------------------------------------------------------------
-# Basic Instructions from:
-# https://docs.microsoft.com/en-us/azure/virtual-machines/extensions/custom-script-windows#troubleshoot-and-support
-
-# In the vm, install the Azure module
-# Install-Module Az
-
-# Then use the cmdlet to extract the logs
 

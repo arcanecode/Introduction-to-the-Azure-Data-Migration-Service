@@ -3,7 +3,7 @@
   "contentVersion": "1.0.0.0",
   "parameters": {
       "sourceWindowsAdminUserName": {
-          "value": "learner"
+          "value": "student"
       },
       "sourceWindowsAdminPassword": {
           "value": "SecureP@ssW0rd"
@@ -12,7 +12,7 @@
           "value": "SecureP@ssW0rd"
       },
       "targetSqlDbAdministratorLogin": {
-          "value": "learner"
+          "value": "student"
       },
       "targetSqlDbAdministratorPassword": {
           "value": "SecureP@ssW0rd"
