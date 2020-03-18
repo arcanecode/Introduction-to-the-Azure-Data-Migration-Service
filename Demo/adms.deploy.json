@@ -51,7 +51,7 @@
           "metadata": {
               "description": "The base URI where artifacts required by this template are located including a trailing '/'"
           },
-          "defaultValue": "https://raw.githubusercontent.com/MicrosoftDocs/mslearn-migrate-sql-server-relational-data/blob/master/"
+          "defaultValue": "https://raw.githubusercontent.com/arcanecode/Introduction-to-the-Azure-Data-Migration-Service/master/Demo/"
       },
       "_artifactsLocationSasToken": {
           "type": "securestring",
@@ -66,9 +66,7 @@
       "sourceServerName": "admsdemovm",
       "targetServerName": "[concat('admsdemosql', uniqueString(resourceGroup().id))]",
       "scriptLocation": "AddDatabaseToSqlServer.ps1",
-      "scripturi": "https://raw.githubusercontent.com/MicrosoftDocs/mslearn-migrate-sql-server-relational-data/master/AddDatabaseToSqlServer.ps1",
-      "bakFileLocation": "https://github.com/MicrosoftDocs/mslearn-migrate-sql-server-relational-data/raw/master/Social.bak",
-      "bacpacFileLocation": "Social.bacpac",
+      "scripturi": "https://raw.githubusercontent.com/arcanecode/Introduction-to-the-Azure-Data-Migration-Service/master/Demo/AddDatabaseToSqlServer.ps1",
       "scriptFiles": "[createarray(variables('scripturi'))]",
       "scriptParameters": "[concat('-userName ', parameters('sourceWindowsAdminUserName'), ' -password \"', parameters('sourceWindowsAdminPassword'))]",
       "storageAccountNamePrefix": "admsdemost",
