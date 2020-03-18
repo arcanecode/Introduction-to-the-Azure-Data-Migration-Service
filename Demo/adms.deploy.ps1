@@ -16,7 +16,7 @@ az group create --location centralus --name admsdemorg
 # az group deployment create --name admsdemodeploy --resource-group admsdemorg --template-file "C:\Users\arcan\OneDrive\Pluralsight\Azure Migrate your SQL Data to Azure SQL\Microsoft-Written-PoC\migrate-sql-server-relational-data\demos\adms.deploy.json" --parameters "C:\Users\arcan\OneDrive\Pluralsight\Azure Migrate your SQL Data to Azure SQL\Microsoft-Written-PoC\migrate-sql-server-relational-data\demos\adms.parameters.json"
 
 # This is to deploy from the Microsoft github site for this ADMS tutorial
-az group deployment create --name admsdemodeploy --resource-group admsdemorg --template-uri https://raw.githubusercontent.com/MicrosoftDocs/mslearn-migrate-sql-server-relational-data/master/adms.deploy.json --parameters https://raw.githubusercontent.com/MicrosoftDocs/mslearn-migrate-sql-server-relational-data/master/adms.parameters.json
+az group deployment create --name admsdemodeploy --resource-group admsdemorg --template-uri https://raw.githubusercontent.com/arcanecode/Introduction-to-the-Azure-Data-Migration-Service/master/Demo/adms.deploy.json --parameters https://raw.githubusercontent.com/arcanecode/Introduction-to-the-Azure-Data-Migration-Service/master/Demo/adms.parameters.json
 
 
 #------------------------------------------------------------------------------
