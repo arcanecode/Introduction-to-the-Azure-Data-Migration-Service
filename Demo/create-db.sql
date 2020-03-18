@@ -15,8 +15,8 @@ INSERT dbo.ArcaneCourses
   (Title, Link)
 VALUES
   ('Getting Started with PowerShell Core for Linux and macOS', 'https://www.pluralsight.com/courses/getting-started-powershell-core-linux-macos')
-, ('Building Your First SSRS Report (with SQL Server 2017)''https://www.pluralsight.com/courses/ssrs-building-your-first-report')
-, ('Kusto Query Language (KQL) from Scratch This is a free course, you do not have to have a paid subscription to watch!', 'https://app.pluralsight.com/library/courses/kusto-query-language-kql-from-scratch/table-of-contents')
+, ('Building Your First SSRS Report (with SQL Server 2017)','https://www.pluralsight.com/courses/ssrs-building-your-first-report')
+, ('Kusto Query Language (KQL) from Scratch ', 'https://app.pluralsight.com/library/courses/kusto-query-language-kql-from-scratch/table-of-contents')
 , ('Azure PowerShell Playbook: Azure SQL', 'https://www.pluralsight.com/courses/azure-powershell-sql-playbook')
 , ('Introduction to Data Warehousing / Business Intelligence', 'https://app.pluralsight.com/library/courses/intro-dwbi-course-2017/table-of-contents')
 , ('SQL Server Reporting Services Playbook', 'https://www.pluralsight.com/courses/sql-server-reporting-playbook')
