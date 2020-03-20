@@ -439,24 +439,6 @@
           },
           "resources": [
               {
-                  "type": "databases",
-                  "sku": {
-                      "name": "Basic",
-                      "tier": "Basic"
-                  },
-                  "name": "[variables('databaseName')]",
-                  "apiVersion": "2017-10-01-preview",
-                  "location": "[parameters('location')]",
-                  "dependsOn": [
-                      "[concat('Microsoft.Sql/servers/', concat(variables('targetServerName')))]"
-                  ],
-                  "properties": {
-                      "collation": "SQL_Latin1_General_CP1_CI_AS",
-                      "maxSizeBytes": 2147483648,
-                      "zoneRedundant": "false"
-                  }
-              },
-              {
                   "type": "firewallrules",
                   "name": "AllowAllWindowsAzureIps",
                   "apiVersion": "2014-04-01-preview",

@@ -40,19 +40,19 @@ The demo is designed to have one thing to fix, students will see what that is an
 
 Target 15:00
 
-## Module 5 - Understanding Online vs Offline Migrations
-
-Concepts: The Azure Data Migration Service can operate in two modes, online and offline. It is important to understand the difference, thus we've devoted an entire module to the concept.
-
-Demo Description: No demo for this module
-
-Target 5:00
-
-## Module 6 - Migrating the Database Schema
+## Module 5 - Migrating the Database Schema
 
 Concepts: In this module, students will see how to use the Azure Data Migration Assistant to migrate the schema of their SQL Server database to the target Azure SQL Database. 
 
 Demo Description: Using the Azure Data Migration Assistant, students will see how to generate the SQL code to generate the database on Azure SQL, using their existing SQL Server. They will be shown how to use the assistant to do the migration, but it will also be pointed out how they can save the generated code and use it from another application.
+
+Target 5:00
+
+## Module 6 - Understanding Online vs Offline Migrations
+
+Concepts: The Azure Data Migration Service can operate in two modes, online and offline. It is important to understand the difference, thus we've devoted an entire module to the concept.
+
+Demo Description: No demo for this module
 
 Target 5:00
 
